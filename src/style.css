@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .content {
@@ -29,19 +32,47 @@ body {
     flex-direction: column;
     height: 82vh;
     background-color: lightcyan;
-    padding-left: 3rem;
-    padding-right: 3rem;;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;;
 }
 
-.leftContainer div {
-    font-size: 1.9rem;;
+.leftContainer > div {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    border-radius: 3px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.taskList:hover {
+   background-color: lightblue; 
+   border-radius: 3px;
+   cursor:pointer
+}
+
+.add {
+    padding: 0 5px;
+}
+
+.add:hover {
+    background-color: lightblue; 
+    border-radius: 3px;
+    cursor:pointer
 }
 
 .projects {
     display: flex;
+    gap: 1rem
 }
 
 .footer {
     background-color: darkcyan;
-    font-size: 1.4rem;;
+    font-size: 1.4rem;
+    display: flex;
+    height: 2.7rem;;
+    justify-content: center;
+    align-items: center;
+   color: aliceblue; 
 }
