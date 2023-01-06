@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/*footer*/
+.header {
+    display: flex;
+    background-color: darkcyan;
+    height: 6rem;
+}
+
+.header img {
+    height: 14rem;
+    margin-top: -4.2rem;
+    margin-left: 2rem;
+}
+
+.main {
+    display: flex;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    height: 82vh;
+    background-color: lightcyan;
+    padding-left: 3rem;
+    padding-right: 3rem;;
+}
+
+.leftContainer div {
+    font-size: 1.9rem;;
+}
+
+.projects {
+    display: flex;
+}
+
+.footer {
+    background-color: darkcyan;
+    font-size: 1.4rem;;
+}
