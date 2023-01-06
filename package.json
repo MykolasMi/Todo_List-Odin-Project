@@ -1,0 +1,23 @@
+{
+  "name": "todo_list-odin-project",
+  "version": "1.0.0",
+  "description": "A Todo list project for the Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MykolasMi/Todo_List-Odin-Project.git"
+  },
+  "author": "Mykolas Mi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MykolasMi/Todo_List-Odin-Project/issues"
+  },
+  "homepage": "https://github.com/MykolasMi/Todo_List-Odin-Project#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
