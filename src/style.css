@@ -30,7 +30,8 @@ body {
 .leftContainer {
     display: flex;
     flex-direction: column;
-    height: 82vh;
+    flex: 0.2;
+    height: 84vh;
     background-color: lightcyan;
     padding-left: 1.5rem;
     padding-right: 1.5rem;;
@@ -67,12 +68,59 @@ body {
     gap: 1rem
 }
 
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.addWindow {
+    background-color: rgb(255, 211, 99);
+    height: 15rem;
+    width: 45rem;
+    display: flex;
+    justify-self: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.addWindow > form {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 0px;
+}
+
+.instr {
+    font-size: 2rem;
+    align-self: center;
+}
+
+.taskInput > input{
+    width: 20rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.darken {
+    opacity: 0.6;
+}
+
 .footer {
     background-color: darkcyan;
     font-size: 1.4rem;
     display: flex;
-    height: 2.7rem;;
+    flex: 1;
     justify-content: center;
     align-items: center;
    color: aliceblue; 
+   padding: 2px;
+}
+
+
+.hide {
+    display: none;
 }
