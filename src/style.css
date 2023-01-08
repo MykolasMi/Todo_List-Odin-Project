@@ -70,9 +70,39 @@ body {
 
 .mainContainer {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex: 1;
+}
+
+.tasksWindow {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bar {
+    background-color: rgb(255, 226, 188);
+    display: flex;
+    justify-content: center;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+#table {
+    display: flex;
+}
+
+tbody {
+    display: flex;
+    flex: 1;
+}
+
+tr {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
 }
 
 .addWindow {
@@ -81,10 +111,12 @@ body {
     width: 45rem;
     display: flex;
     justify-self: center;
+    align-self: center;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    position: absolute;
 }
 
 .addWindow > form {

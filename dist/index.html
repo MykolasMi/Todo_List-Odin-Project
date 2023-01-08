@@ -20,13 +20,26 @@
                     <div>Projects</div>
                     <div class="addProject add">+</div>
                 </div>
-                <div class="taskList">Example Project</div>
+                <div class="taskList personalPr">Personal</div>
                 <div class="addTask add">+</div>
             </div>
             <div class="mainContainer">
+                <div class="tasksWindow">
+                    <div class="bar">All tasks</div>
+                    <div class="libraryContainer">
+                        <table id="table">
+                            <tr>
+                                <td>Task</td>
+                                <td>Project</td>
+                                <td>Time left</td>
+                                <td>Check</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="addWindow hide">
                     <div class="instr">Create a new task</div>
-                    <form>
+                    <form id="form">
                         <div class="taskInput"><input type="text" id="taskName" name="taskName" placeholder='My new task!'></div>
 
                         <select name="location" id="location">

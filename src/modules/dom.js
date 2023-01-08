@@ -7,4 +7,8 @@ const addNew = () => {
     addWindow.classList.toggle('hide');
 }
 
+const showPersonal = () => {
+    
+}
+
 export { addNew }

@@ -1,5 +1,6 @@
 import { addNew } from './modules/dom';
-import { addTask } from './modules/task';
+
+import { submitListener  } from './modules/task';
 listener();
 submitListener();
 
@@ -12,11 +13,11 @@ function listener () {
         addNew();
 })}
 
-function submitListener () {
-    const submitBtn = document.querySelector('.submitBtn')
-    submitBtn.addEventListener('click', function(e) {
-        e.preventDefault;
-        addTask();
+/*function personalListener() {
+    const personalPr = document.querySelector('.personalPr');
+    personalPr.addEventListener('click', function(e) {
+    
+    showPersonal;
     })
-}
+}*/
 
