@@ -1,12 +1,13 @@
+import { addNew, showTask } from "./dom";
+
 let personal = [];
 
-const submitListener = () => {
-    const submitBtn = document.querySelector('.submitBtn')
-    submitBtn.addEventListener('click', function(e) {
-        e.preventDefault;
-        alert('blet')
+function submitListener () {
+    const form = document.querySelector('#form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
         addTask();
-        alert('blet2')
+        addNew();
     })
 }
 
@@ -29,10 +30,12 @@ function addTask () {
     const taskName = document.querySelector('#taskName');
     const taskLocation = document.querySelector('#location');
 
-    let task1 = new task(taskName, taskLocation);
+    let newTask = new task(taskName, taskLocation);
     personal.push(task);
 
+    showTask(newTask.name);
     console.log('works');
 }
+
 
 export { submitListener }

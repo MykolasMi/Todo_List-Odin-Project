@@ -8,8 +8,6 @@ function listener () {
     const addProject = document.querySelector('.addProject')
 
     addProject.addEventListener('click', function(e) {
-        e.preventDefault();
-
         addNew();
 })}
 

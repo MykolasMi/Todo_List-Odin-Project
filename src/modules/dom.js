@@ -7,8 +7,14 @@ const addNew = () => {
     addWindow.classList.toggle('hide');
 }
 
-const showPersonal = () => {
+const showTask = (task) => {
+    const table = document.querySelector('#table')
+    const row = document.createElement('tr')
+    const taskName = document.createElement('tr')
+    taskName.textContent = task;
     
+    table.appendChild(row);
+    row.appendChild(taskName);
 }
 
-export { addNew }
+export { addNew, showTask }
