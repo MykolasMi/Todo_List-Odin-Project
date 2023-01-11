@@ -13,22 +13,28 @@
             <img src="../src/logo.png" alt="">
         </div>
         <div class="main">
+            
             <div class="leftContainer">
                 <div class="taskList">Today</div>
                 <div class="taskList">This week</div>
-                <div class="projects">
+                <div class="projectsPlus">
                     <div>Projects</div>
                     <div class="addProject add">+</div>
                 </div>
-                <div class="addProject">
+
+                <div class="projects">
+                <div class="taskList personalPr">Personal</div>
+                </div>
+                <div class="addTask add">+</div>
+
+                <div class="addProjects hide">
                     <form id="formProject">
                         <div class="projectInput"><input type="text" id="projectName" name="projectName" placeholder='My new project!'><hr></div>
                         <button type="submitPr" class="submitPrBtn"><img src="../src/addTask.png"></button>
                     </form>
                 </div>
-                <div class="taskList personalPr">Personal</div>
-                <div class="addTask add">+</div>
             </div>
+
             <div class="mainContainer">
                 <div class="tasksWindow">
                     <div class="bar">All tasks</div>
@@ -43,6 +49,7 @@
                         </table>
                     </div>
                 </div>
+
                 <div class="addWindow hide">
                     <div class="instr">Create a new task</div>
                     <form id="form">
@@ -57,6 +64,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="footer">
             <div class="credentials">Made by Mykolas Miškinis</div>
         </div>

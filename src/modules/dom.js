@@ -17,4 +17,16 @@ const showTask = (task) => {
     row.appendChild(taskName);
 }
 
-export { addNew, showTask }
+function addProject() {
+    const addProjects = document.querySelector('.addProjects');
+    addProjects.classList.toggle('hide');
+}
+
+const showProjects = (newProject) => {
+    const projects = document.querySelector('.projects');
+    const project = document.createElement('div');
+    project.textContent = newProject.name;
+    projects.appendChild(project);
+}
+
+export { addNew, showTask, addProject, showProjects }
