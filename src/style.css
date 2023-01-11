@@ -157,3 +157,38 @@ tr {
 .hide {
     display: none;
 }
+
+.addProject > form {
+    display: flex;
+    gap: 5px;
+}
+
+.submitPrBtn img {
+    height: 1rem;
+    cursor: pointer;
+}
+
+.submitPrBtn {
+    border: none;
+    background-color: transparent;
+}
+
+#projectName {
+    height: 1.2rem;
+    background-color: transparent;
+    border: none;
+    text-underline-position: below;
+}
+
+#projectName:target {
+    /*borderi sumazint kai raso*/
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    margin-top: -1px;
+}
