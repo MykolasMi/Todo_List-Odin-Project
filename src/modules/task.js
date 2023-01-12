@@ -1,7 +1,5 @@
 import { addNew, showTask } from "./dom";
 
-let personal = [];
-
 function submitListener () {
     const form = document.querySelector('#form');
     form.addEventListener('submit', function(event) {
@@ -31,7 +29,11 @@ function addTask () {
     const taskLocation = document.querySelector('#location');
 
     let newTask = new task(taskName, taskLocation);
-    personal.push(task);
+
+    console.log(taskLocation.value);
+    let selectedArray = taskLocation.value;
+
+    selectedArray.push(task); //padaryti kad pushintu i tinkama array projekta
 
     showTask(newTask.name);
     console.log('works');

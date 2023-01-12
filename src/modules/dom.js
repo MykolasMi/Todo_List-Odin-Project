@@ -29,4 +29,14 @@ const showProjects = (newProject) => {
     projects.appendChild(project);
 }
 
-export { addNew, showTask, addProject, showProjects }
+function loadProjectsForm(newProject) {
+    const options = document.querySelector('#location');
+    //for(let i=0; i<projects.length; i++) {
+        const projectOption = document.createElement('option');
+        projectOption.value = newProject.name;
+        projectOption.textContent = newProject.name;
+        options.appendChild(projectOption);
+    //}
+}
+
+export { addNew, showTask, addProject, showProjects, loadProjectsForm }
