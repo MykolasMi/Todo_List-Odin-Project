@@ -14,21 +14,9 @@ class project {
     }
 }
 
-
-    let personal = new project('personal')
-    let projects = [];
-    projects.push(personal);
-
-    /*console.log(personal);
-    let task = 'lol'
-    personal.data.push(task);
-    personal.addTaskToProject(task);
-    console.log(personal); //VEIKIA CLASS FUNKCIJA PRIDETI TASKUS
-    console.log('...')
-    console.log(personal.data);*/ //VEIKIA ARRAY CLASS REIKIA DB PUSHINT TASKUS
-
-
-
+let personal = new project('personal')
+let projects = [];
+projects.push(personal);
 
 
 function windowListener () {
@@ -42,13 +30,12 @@ function submitListenerPr () {
     const formPr = document.querySelector('#formProject');
     formPr.addEventListener('submit', function(event) {
         event.preventDefault();
-        addProjects();
+        const projectName = document.querySelector('#projectName').value
+        addProjects(projectName);
     })
 }
 
-function addProjects () {
-    const projectName = document.querySelector('#projectName')
-
+function addProjects (projectName) {
     let newProject = new project(projectName);
     projects.push(newProject); //perkelt sita i class
     showProjects(newProject);
@@ -67,7 +54,6 @@ function associateInputWithArray(projectArray) {
     for (let i=0; i<projects.length; i++) {
         if (projects[i].name == projectArray) {
             console.log('zjbs')
-            //let num = [i]
             return projects[i];
         }
         else {
@@ -78,13 +64,8 @@ function associateInputWithArray(projectArray) {
 }
 
 function addTaskToProjetArray (newTask, projectArray) {
-    //associateInputWithArray(projectArray);
-    //console.log(num)
     associateInputWithArray(projectArray).addTaskToProject(newTask);
     console.log(personal);
-    //console.log(newTask)
-    //console.log(projectArray.value)
-    //projectArray.value.addTaskToProject(newTask);
 }
 
 export { windowListener, submitListenerPr, addTaskToProjetArray};

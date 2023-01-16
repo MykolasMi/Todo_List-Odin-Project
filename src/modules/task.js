@@ -26,30 +26,12 @@ class task {
 }
 
 function addTask () {
-    //let personal = [];
     const taskName = document.querySelector('#taskName');
     const taskLocation = document.querySelector('#location');
-
     let newTask = new task(taskName, taskLocation);
 
     addTaskToProjetArray(newTask, taskLocation.value);
-
-    //personal.addTaskToProject(newTask);
-
-    /*console.log(taskLocation.value);
-    let selectedArray = taskLocation.value; //t.value.push is not a function?
-    console.log(selectedArray);
-    console.log(personal);
-    console.log(newTask)
-    console.log(newProject) //PADARYTI IS CLASS FUNCTIONO BET PERSONAL DABAR NET NE CLASS
-
-    //padaryti kad cia selectintu is esamu arrays
-
-    selectedArray.push(newTask); //padaryti kad pushintu i tinkama array projekta*/
-
-
-
-    showTask(newTask.name);
+    showTask(newTask);
     console.log('addTask() works');
 }
 

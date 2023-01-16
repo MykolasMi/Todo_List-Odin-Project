@@ -1,20 +1,31 @@
 const addNew = () => {
-    //const body = document.querySelector('body');
-    //body.classList.toggle('darken');
-
     const addWindow = document.querySelector('.addWindow');
-    //addWindow.classList.toggle('darken');
     addWindow.classList.toggle('hide');
 }
 
 const showTask = (task) => {
-    const table = document.querySelector('#table')
-    const row = document.createElement('tr')
-    const taskName = document.createElement('tr')
-    taskName.textContent = task;
-    
-    table.appendChild(row);
+    const table = document.querySelector('#table');
+    const tbody = document.createElement('tbody');
+    const row = document.createElement('tr');
+    const taskName = document.createElement('td');
+    const taskProject = document.createElement('td');
+    const timeLeft = document.createElement('td');
+    const checkBtn = document.createElement('button');
+    const checkIcon = document.createElement('img');
+
+    taskName.textContent = task.name;
+    taskProject.textContent = task.project;
+    timeLeft.textContent = 'xx:xx';
+    checkIcon.src = '../src/checkTask.png'
+    checkBtn.classList.add = 'checkBtn'
+
+    table.appendChild(tbody);
+    tbody.appendChild(row);
     row.appendChild(taskName);
+    row.appendChild(taskProject);
+    row.appendChild(timeLeft);
+    row.appendChild(checkBtn);
+    checkBtn.appendChild(checkIcon);
 }
 
 function addProject() {
@@ -31,12 +42,10 @@ const showProjects = (newProject) => {
 
 function loadProjectsForm(newProject) {
     const options = document.querySelector('#location');
-    //for(let i=0; i<projects.length; i++) {
-        const projectOption = document.createElement('option');
-        projectOption.value = newProject.name;
-        projectOption.textContent = newProject.name;
-        options.appendChild(projectOption);
-    //}
+    const projectOption = document.createElement('option');
+    projectOption.value = newProject.name;
+    projectOption.textContent = newProject.name;
+    options.appendChild(projectOption);
 }
 
 export { addNew, showTask, addProject, showProjects, loadProjectsForm }

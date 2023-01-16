@@ -105,15 +105,36 @@ body {
     flex-direction: column;
 }
 
+.tableExpl {
+    background-color: rgb(255, 249, 241);
+}
+
 tbody {
     display: flex;
     flex: 1;
 }
 
-tr {
+tr{
     display: flex;
     flex: 1;
     justify-content: space-around;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+}
+
+tr button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+tr button:hover {
+    /*pakeist icon i checkmark*/
+}
+
+tr>button>img {
+height: 1.2rem;
 }
 
 .addWindow {
@@ -178,7 +199,7 @@ tr {
     cursor: pointer;
 }
 
-.submitPrBtn {
+.submitPrBtn, .checkBtn {
     border: none;
     background-color: transparent;
 }
