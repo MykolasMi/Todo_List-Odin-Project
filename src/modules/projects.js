@@ -1,11 +1,11 @@
 import { addProject } from "./dom";
 import { showProjects } from "./dom";
 import { loadProjectsForm } from "./dom";
+import { removeTaskListener } from "./task";
 
 class project {
     constructor(name) {
         this.name = name;
-        this.length = 0;
         this.data = [];
     }
 
@@ -40,24 +40,14 @@ function addProjects (projectName) {
     projects.push(newProject); //perkelt sita i class
     showProjects(newProject);
     loadProjectsForm(newProject);
-
-    console.log(projects);
-    console.log(newProject);
-    console.log('blet');
 }
 
 function associateInputWithArray(projectArray) {
-    console.log('..')
-    console.log(projects)
-    console.log(projects[0].name)
-    console.log(projectArray)
     for (let i=0; i<projects.length; i++) {
         if (projects[i].name == projectArray) {
-            console.log('zjbs')
             return projects[i];
         }
         else {
-            console.log('continue')
             continue
         }
     }
@@ -65,7 +55,39 @@ function associateInputWithArray(projectArray) {
 
 function addTaskToProjetArray (newTask, projectArray) {
     associateInputWithArray(projectArray).addTaskToProject(newTask);
-    console.log(personal);
+    console.log('...')
+    console.log(associateInputWithArray(projectArray))
+    let newInfoArray = new infoArray(projectArray.indexOf(newTask), associateInputWithArray(projectArray))
+    class infoArray {
+        constructor(taskIndex, taskprojectArray) {
+            this.taskIndex = taskIndex;
+            this.taskProjectArray = taskprojectArray;
+        }
+    } //sumerginti sita class su tasko class ateity
+    return newInfoArray;
+
+    returnArrayIndex(projectArray.indexOf(newTask), associateInputWithArray(projectArray));
+    console.log('[[')
+    console.log(newTask)
+    console.log(projectArray.indexOf(newTask), associateInputWithArray(projectArray))
+    console.log(associateInputWithArray(projectArray))
+    console.log(personal); //ISSIAISKINTI KELINTAS JIS ARRAY ELEMENTAS IR JI NAIKINTI KITOJ FUNKCIJOJ
 }
 
-export { windowListener, submitListenerPr, addTaskToProjetArray};
+
+
+function returnArrayIndex (index, projectArray) {
+    console.log(index);
+    console.log(projectArray);
+    let taskIndex = index;
+    let taskProjectArray = projectArray;
+    console.log('...')
+    console.log(indexX)
+    //console.log(indexX) //neranda butent sito tasko vietos, cj nes neasocijuota
+}
+
+function removeTask () {
+    taskProjectArray.splice(taskIndex, 1); //reik gauti situs variables
+}
+
+export { windowListener, submitListenerPr, addTaskToProjetArray, returnArrayIndex};

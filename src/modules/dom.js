@@ -16,8 +16,8 @@ const showTask = (task) => {
     taskName.textContent = task.name;
     taskProject.textContent = task.project;
     timeLeft.textContent = 'xx:xx';
-    checkIcon.src = '../src/checkTask.png'
-    checkBtn.classList.add = 'checkBtn'
+    checkIcon.src = '../src/checkTask.png';
+    checkBtn.classList.add('checkBtn');
 
     table.appendChild(tbody);
     tbody.appendChild(row);
